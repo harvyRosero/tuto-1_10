@@ -1,0 +1,21 @@
+<html>
+    <body>
+        {% include  "superior/barra.html" %} 
+
+    <h1> mi primer plantilla </h1> 
+    {{ nombre.upper }} {{ apellido }}
+    <h2> Estamos videno el tema de la plantilla {{ actual.day }}/ {{ actual.month }}/ {{ actual.year }} </h2>
+
+    <p> <strong>Temas </strong> </p>
+
+    <p> 
+        {% if temas %}
+            {% for tema in temas %} 
+            <li> {{ tema }} </li>
+            {% endfor %}
+        {% else %}
+            <p> No hay temas </p>
+        {% endif %}
+    </p>
+    </body>
+</html>
